@@ -1,0 +1,16 @@
+ /*
+	CREATE BY :  DevStory(materokatti@gmail.com`)
+	CREATTE DATE : 08/27/2024
+	Description : Grouping by more than on field at a time | What are the average invoice totals by billing country and city?
+*/
+
+SELECT
+	BillingCountry,
+	BillingCity,
+	round(avg(total), 2)
+FROM
+	Invoice
+GROUP BY
+	BillingCountry, BillingCity
+ORDER BY
+	BillingCountry
