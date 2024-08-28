@@ -13,4 +13,4 @@ FROM
 GROUP BY
 	BillingCountry, BillingCity
 ORDER BY
-	BillingCountry
+	BillingCountry DESC;
