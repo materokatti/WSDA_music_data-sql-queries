@@ -11,7 +11,7 @@ SELECT
 FROM
 	Invoice
 WHERE
-	InvoiceDate >
+	InvoiceDate IN
 (SELECT
 	InvoiceDate
 FROM
