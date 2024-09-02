@@ -1,7 +1,7 @@
  /*
 	CREATE BY :  DevStory(materokatti@gmail.com)
 	CREATTE DATE : 09/03/2024
-	Description : Subqueries without Aggregate functions
+	Description : Returning multiple value from a subquery
 */
 
 SELECT
@@ -17,4 +17,4 @@ WHERE
 FROM
 	Invoice
 WHERE
-	InvoiceId = 251)
+	InvoiceId IN (251, 252, 254))
