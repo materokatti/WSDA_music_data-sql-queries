@@ -1,0 +1,19 @@
+/*
+    Create By : DevStory
+    Create Date : 09/04/2024
+    Description : This query identifies tracks that have never been sold.
+*/
+SELECT 
+    t.TRACKID AS "Track ID",
+    t.Name AS "Track Name",
+    t.Composer,
+    g.NAME AS "GENRE"
+FROM 
+    Track t JOIN Genre g ON t.GENREID = g.GENREID
+WHERE
+    t.TrackId NOT IN (
+        SELECT DISTINCT li.TrackId
+        FROM InvoiceLine li
+    )
+ORDER BY
+    "Track Name" ASC
