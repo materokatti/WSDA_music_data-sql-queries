@@ -9,3 +9,6 @@ SELECT
 	round(avg(total),2) AS [Average Total]
 FROM 
 	Invoice
+
+-- DROP VIEW 
+-- 	V_AvgTotal
